@@ -7,6 +7,8 @@ import {
   useGetExpenseQuery,
   useGetIncomeQuery,
 } from "./Slices/ApiSlice";
+import Signup from "./Signup/SignUp";
+import Login from "./Login/Login";
 // import axios from "axios";
 const getCurrentDate = () => {
   const today = new Date();
@@ -99,12 +101,16 @@ export default function Main() {
   };
 
   return (
-    <div className="lg:flex gap-y-5 lg:gap-1 xl:gap-x-2  justify-between    py-5 px-2 min-h-screen  w-[100vw] ">
+    <>
+     
+    
+    <div className="lg:flex gap-y-5 lg:gap-1 xl:gap-x-2 items-center  justify-between    py-2 px-2 min-h-screen  w-[100vw] ">
+      
       <div>
         <Expanse />
       </div>
 
-      <div className="bg-[#ffffffeb]  p-7 mt-3 mb-3 lg:mt-0 lg:mb-0  rounded-lg shadow-lg glassmorphic-container backdrop-blur-xl backdrop-filter bg-opacity-10  lg:w-[33vw]">
+      <div className="bg-[#ffffffeb]  p-4 mt-3 mb-3 lg:mt-0 lg:mb-0  rounded-lg shadow-lg glassmorphic-container backdrop-blur-xl backdrop-filter bg-opacity-10  lg:w-[33vw] h-[fit-content]">
         <h1 className="text-3xl font-bold text-purple-700 mb-6">
           Expense Tracker
         </h1>
@@ -210,5 +216,6 @@ export default function Main() {
         <Income />
       </div>
     </div>
+    </>
   );
 }

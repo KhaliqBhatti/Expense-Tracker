@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const Api = createApi({
   reducerPath: "ApiSlice",
-  tagTypes: ["expensesdetail", "incomedetail", "balancedetail"],
+  tagTypes: ["expensesdetail", "incomedetail", "balancedetail", "userdetail"],
   baseQuery: fetchBaseQuery({
     baseUrl: "https://json-server-zrdt.onrender.com/",
   }),
@@ -55,6 +55,20 @@ export const Api = createApi({
       }),
       invalidatesTags: ["expensesdetail"],
     }),
+
+    getUser: builder.query({
+      query: () => ({
+        url: "user",
+        method: "GET",
+      }),
+    }),
+    signUpUser: builder.mutation({
+      query: (newUser) => ({
+        url: "user",
+        method: "POST",
+        body: newUser,
+      }),
+    }),
   }),
 });
 
@@ -65,4 +79,5 @@ export const {
   useCreateIncomeMutation,
   useDelIncomeMutation,
   useDelExpenseMutation,
+  useSignUpUserMutation, useGetUserQuery
 } = Api;
