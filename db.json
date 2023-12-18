@@ -1,0 +1,62 @@
+{
+  "expenses": [
+    {
+      "type": "Expenses",
+      "ammount": "15000",
+      "category": "Shopping",
+      "description": "",
+      "date": "2023-12-06",
+      "id": 1
+    },
+    {
+      "type": "Expenses",
+      "ammount": "22330",
+      "category": "Travel",
+      "description": "",
+      "date": "2023-12-15",
+      "id": 2
+    },
+    {
+      "type": "Expenses",
+      "ammount": "4500",
+      "category": "Shopping",
+      "description": "",
+      "date": "2023-12-15",
+      "id": 3
+    }
+  ],
+  "income": [
+    {
+      "type": "Income",
+      "ammount": "1200",
+      "category": "Gifts",
+      "description": "",
+      "date": "2023-12-15",
+      "id": 1
+    },
+    {
+      "type": "Income",
+      "ammount": "15000",
+      "category": "Salary",
+      "description": "",
+      "date": "2023-12-15",
+      "id": 2
+    },
+    {
+      "type": "Income",
+      "ammount": "35000",
+      "category": "Rental income",
+      "description": "",
+      "date": "2023-12-15",
+      "id": 3
+    },
+    {
+      "type": "Income",
+      "ammount": "12000",
+      "category": "Extra income",
+      "description": "",
+      "date": "2023-12-15",
+      "id": 4
+    }
+  ]
+}
