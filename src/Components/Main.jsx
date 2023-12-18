@@ -25,6 +25,7 @@ export default function Main() {
     description: "",
     date: getCurrentDate(),
   });
+  const [prevExpense, setPrevExpense] = useState(null);
 
   const [createIncome] = useCreateIncomeMutation();
   const [createExpense] = useCreateExpenseMutation();
@@ -55,11 +56,46 @@ export default function Main() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (
+      prevExpense &&
+      prevExpense.type === inputValue.type &&
+      prevExpense.ammount === inputValue.ammount &&
+      prevExpense.category === inputValue.category &&
+      prevExpense.description === inputValue.description &&
+      prevExpense.date === inputValue.date
+    ) {
+      // Show toaster with error message (You can replace this with your preferred way of displaying errors)
+      console.error("Error: Duplicate expense entry!");
+      return;
+    }
+
     if (inputValue.type === "Expenses") {
       createExpense(inputValue);
+      // setInputValue({
+      //   type: "",
+      //   ammount: "",
+      //   category: "",
+      //   description: "",
+      //   date:''
+      // })
     } else if (inputValue.type === "Income") {
       createIncome(inputValue);
+      // setInputValue({
+      //   type: "",
+      //   ammount: "",
+      //   category: "",
+      //   description: "",
+      //   date:''
+      // })
     }
+    setInputValue({
+      type: "",
+      ammount: "",
+      category: "",
+      description: "",
+      date: "",
+    });
   };
 
   return (

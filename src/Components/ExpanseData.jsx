@@ -9,7 +9,7 @@ export default function Expanse() {
   };
 
   return (
-    <div className="flex flex-col items-center py-3 from-purple-200 via-purple-300 to-purple-500 bg-gradient-to-br rounded-md w-full lg:w-[33vw]">
+    <div className="flex flex-col items-center py-3 from-purple-200 via-purple-300 to-purple-500 bg-gradient-to-br rounded-md w-full lg:w-[33vw] max-h-screen overflow-y-auto">
       <h1 className="text-xl font-semibold mb-4 ">Expenses</h1>
       <div className="flex items-center w-full ">
         <div className="overflow-y-auto relative  flex justify-between w-full shadow-md sm:rounded-lg">

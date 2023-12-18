@@ -10,7 +10,7 @@ export default function Income() {
   };
 
   return (
-    <div className="flex flex-col items-center py-3   from-purple-200 via-purple-300 to-purple-500 bg-gradient-to-br rounded-md lg:w-[33vw]">
+    <div className="flex flex-col items-center py-3   from-purple-200 via-purple-300 to-purple-500 bg-gradient-to-br rounded-md lg:w-[33vw] max-h-screen overflow-y-auto">
       <h1 className="text-xl font-semibold mb-4 ">Income</h1>
       <div className="flex items-center justify-center w-full">
         <div
