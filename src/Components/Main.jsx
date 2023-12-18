@@ -99,7 +99,7 @@ export default function Main() {
   };
 
   return (
-    <div className="lg:flex gap-y-5 items-center lg:gap-1 xl:gap-x-2  justify-between    py-5 px-2 min-h-screen  w-[100vw] ">
+    <div className="lg:flex gap-y-5 lg:gap-1 xl:gap-x-2  justify-between    py-5 px-2 min-h-screen  w-[100vw] ">
       <div>
         <Expanse />
       </div>
